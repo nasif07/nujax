@@ -12,7 +12,7 @@ const SectionHeader = ({ title, subTitle, button, rootClasses }) => {
       </h1>
       <p
         style={{ lineHeight: "130%", letterSpacing: "-0.03em" }}
-        className="text-[#878C91] text-base font-semibold max-w-[320px]">
+        className="text-[#878C91] text-base font-semibold max-w-[350px]">
         {subTitle}
       </p>
     </div>
