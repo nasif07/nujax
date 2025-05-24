@@ -19,6 +19,16 @@ const faqs = [
     answer:
       "Yes! Our support team is available around the clock via chat and email.",
   },
+  {
+    question: "Can you help with Instagram video editing?",
+    answer:
+      "Yes! Our support team is available around the clock via chat and email.",
+  },
+  {
+    question: "What make your company different?",
+    answer:
+      "Yes! Our support team is available around the clock via chat and email.",
+  },
 ];
 
 const FAQ = () => {
