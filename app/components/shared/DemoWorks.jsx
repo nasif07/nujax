@@ -2,6 +2,7 @@
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
 import React, { useState } from "react";
+
 const categories = [
   "All",
   "Beauty and Fashion",
@@ -16,11 +17,12 @@ const categories = [
   "Youtube videos",
   "Wedding edits",
 ];
+
 const videos = [
   {
     category: "Tiktok and reel",
     title: "Viral TikTok Ad",
-    videoId: "abc123XYZ", // replace with real ID
+    videoId: "dQw4w9WgXcQ",
   },
   {
     category: "Youtube videos",
@@ -30,17 +32,37 @@ const videos = [
   {
     category: "Wedding edits",
     title: "Wedding Highlight",
-    videoId: "pKpXqZ-HJ34",
+    videoId: "dQw4w9WgXcQ",
   },
   {
-    category: "All",
-    title: "All Showreel",
-    videoId: "A1B2C3D4EFG",
+    category: "Wedding edits",
+    title: "Wedding Highlight",
+    videoId: "dQw4w9WgXcQ",
+  },
+];
+
+const shorts = [
+  {
+    title: "Short 1",
+    videoId: "y_NFD3N8Izo",
+  },
+  {
+    title: "Short 2",
+    videoId: "8RXeo5A-RK8",
+  },
+  {
+    title: "Short 3",
+    videoId: "CvV40-lVZYE",
   },
 ];
 
 const DemoWorks = () => {
   const [activeTab, setActiveTab] = useState("All");
+
+  const filteredVideos = videos.filter(
+    (video) => activeTab === "All" || video.category === activeTab
+  );
+
   return (
     <Container background={"bg-[#EBEBEB]"}>
       <SectionHeader
@@ -51,6 +73,8 @@ const DemoWorks = () => {
         }
         titleColor="text-[#010205]"
       />
+
+      {/* Category Tabs */}
       <div className="flex flex-wrap gap-3 justify-center my-10 max-w-5xl mx-auto">
         {categories.map((category) => (
           <button
@@ -65,24 +89,44 @@ const DemoWorks = () => {
           </button>
         ))}
       </div>
+
+      {/* Main Videos */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
-        {videos
-          .filter(
-            (video) => activeTab === "All" || video.category === activeTab
-          )
-          .map((video, index) => (
+        {filteredVideos.map((video, index) => (
+          <div
+            key={index}
+            className="w-full aspect-video rounded-xl overflow-hidden shadow-md">
+            <iframe
+              className="w-full h-full"
+              src={`https://www.youtube.com/embed/${video.videoId}`}
+              title={video.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen></iframe>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 max-w-6xl mx-auto">
+          {shorts.map((short, index) => (
             <div
               key={index}
-              className="w-full aspect-video rounded-xl overflow-hidden shadow-md">
+              className="aspect-[9/16] w-full rounded-xl overflow-hidden shadow-md">
               <iframe
                 className="w-full h-full"
-                src={`https://www.youtube.com/embed/${video.videoId}`}
-                title={video.title}
+                src={`https://www.youtube.com/embed/${short.videoId}`}
+                title={short.title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen></iframe>
             </div>
           ))}
+        </div>
+        <div className="text-center py-20">
+          <button className="py-4 px-8 bg-[#EC4845] text-base font-bold  text-white rounded-[30px] cursor-pointer ">
+            Explore Full Gallery ↗
+          </button>
+        </div>
       </div>
     </Container>
   );
