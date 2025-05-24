@@ -28,7 +28,16 @@ const Banner = () => {
               View previous works
             </button>
           </div>
-          <div className="bg-[#D9D9D9] w-[960px] h-[540px] rounded-4xl"></div>
+
+          <div className="w-full max-w-[960px] aspect-video rounded-4xl overflow-hidden">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/3vF88LhkU7M"
+              title="Client Demo Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen></iframe>
+          </div>
         </div>
 
         {/* Floating Icons */}
@@ -66,3 +75,7 @@ const Banner = () => {
 };
 
 export default Banner;
+
+{
+  /* <iframe width="1431" height="716" src="https://www.youtube.com/embed/3vF88LhkU7M" title="কম্পিউটেক্সে Thermalright এর Mini PC, Cooler, Case লাইন-আপ | Computex 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> */
+}

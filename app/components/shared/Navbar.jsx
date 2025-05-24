@@ -17,7 +17,8 @@ const Navbar = () => {
     { name: "Contact Us", href: "/contact" },
   ];
   return (
-    <nav className="max-w-[1500px] mx-auto px-5 py-7 flex items-center justify-between">
+   <nav className="bg-[#010205]">
+     <div className="max-w-[1500px] mx-auto px-5 py-7 flex items-center justify-between ">
       {/* Left: Logo */}
       <div>
         <Link href="/">
@@ -48,7 +49,8 @@ const Navbar = () => {
           <LuBell className="text-white text-xl" />
         </div>
       </div>
-    </nav>
+    </div>
+   </nav>
   );
 };
 

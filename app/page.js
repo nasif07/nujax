@@ -7,6 +7,7 @@ import OurProcess from "./components/home/OurProcess";
 import FAQ from "./components/shared/Faq";
 import SocialMediaBanner from "./components/shared/SocialMediaBanner";
 import MeetOurClients from "./components/home/MeetOurClients";
+import DemoWorks from "./components/shared/DemoWorks";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Services/>
       <MarketPlaces/>
       <MeetOurClients/>
+      <DemoWorks/>
       <OurProcess/>
       <FAQ/>
       <SocialMediaBanner/>
