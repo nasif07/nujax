@@ -14,7 +14,7 @@ const Navbar = () => {
     { name: "Solutions", href: "/solutions" },
     { name: "Our Gallery", href: "/gallery" },
     { name: "Request a Demo", href: "/demo" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact Us", href: "/contact-us" },
   ];
   return (
    <nav className="bg-[#010205] hidden lg:block">

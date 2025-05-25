@@ -22,7 +22,7 @@ const Banner = () => {
           <div className="space-x-5">
             <button
               type="button"
-              className="inline-flex gap-8 items-center gap-2 py-4 px-8 bg-[#EC4845] text-base font-bold text-white rounded-[30px] cursor-pointer">
+              className="inline-flex gap-8 items-center py-4 px-8 bg-[#EC4845] text-base font-bold text-white rounded-[30px] cursor-pointer">
               Schedule Call <FaArrowRight />
             </button>
             <button type="button" className="underline text-white">
