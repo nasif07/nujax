@@ -4,10 +4,12 @@ import FAQ from "../components/shared/Faq";
 import SocialMediaBanner from "../components/shared/SocialMediaBanner";
 import batch from "@/app/assets/guaranteedBatch.svg";
 import Banner from "../components/solutions/Banner";
+import ChallengesYouFace from "../components/solutions/ChallengesYouFace";
 const page = () => {
   return (
     <>
     <Banner/>
+    <ChallengesYouFace/>
     <MeetOurClients/>
     
       <div className="bg-[#010205] pt-16">
