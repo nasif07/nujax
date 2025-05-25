@@ -7,7 +7,7 @@ const SectionHeader = ({ title, subTitle, button, rootClasses, titleColor = "tex
       {button && <Button>{button}</Button>}
       <h1
         style={{ lineHeight: "130%", letterSpacing: "-1.44px" }}
-        className={`font-semibold text-5xl ${titleColor}`}>
+        className={`font-semibold text-4xl md:text-5xl ${titleColor}`}>
         {title}
       </h1>
       <p

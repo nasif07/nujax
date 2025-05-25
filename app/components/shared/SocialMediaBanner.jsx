@@ -6,7 +6,7 @@ import Image from "next/image";
 const SocialMediaBanner = () => {
   return (
     <Container>
-      <section className="flex items-center bg-[#EC4845] rounded-4xl overflow-hidden pt-10 ">
+      <section className="flex flex-col md:flex-row items-center bg-[#EC4845] rounded-4xl overflow-hidden pt-10 ">
         <div
           style={{ backgroundImage: `url(${background.src})` }}
           className=" rounded-3xl bg-no-repeat bg-left w-4/9">
@@ -20,7 +20,7 @@ const SocialMediaBanner = () => {
         <div className=" text-white px-6 space-y-6">
           <h1
             style={{ lineHeight: "108%" }}
-            className="text-[64px] font-semibold max-w-[450px]">
+            className="text-3xl md:text-[64px] font-semibold max-w-[450px]">
             Ready to GO Viral on social media?
           </h1>
           <p className="text-base font-medium max-w-[400px]">

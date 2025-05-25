@@ -17,7 +17,7 @@ const Navbar = () => {
     { name: "Contact Us", href: "/contact" },
   ];
   return (
-   <nav className="bg-[#010205]">
+   <nav className="bg-[#010205] hidden lg:block">
      <div className="max-w-[1500px] mx-auto px-5 py-7 flex items-center justify-between ">
       {/* Left: Logo */}
       <div>

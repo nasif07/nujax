@@ -44,7 +44,7 @@ const Footer = () => {
   return (
     <Container>
       <footer className="py-10">
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-10">
           {/* First Column - Bigger */}
           <div className="flex-1 max-w-[570px] mr-10">
             <Image src={logo} alt="nujax logo" className="w-40 mb-3" />

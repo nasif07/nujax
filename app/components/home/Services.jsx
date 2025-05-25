@@ -29,7 +29,7 @@ const Services = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <Button>We can help with</Button>
-          <h2 className="text-white font-semibold text-[48px] max-w-[600px] mt-10">
+          <h2 className="text-white font-semibold text-3xl md:text-[48px] max-w-[600px] mt-10">
             Guaranteed Social Media Buzz – More Views, More Engagement!
           </h2>
         </div>

@@ -11,7 +11,7 @@ const logos = [afterpay, basecamp, maze];
 const TrustedBy = () => {
   return (
     <Container>
-      <section className="flex flex-col md:flex-row items-center justify-between gap-8 py-8">
+      <section className="flex flex-col lg:flex-row items-center justify-between gap-8 py-8">
         <h2 className="text-white text-base font-semibold leading-[160%] text-center md:text-left text-nowrap">
           Trusted by the <span className="text-[#EC4845]">100+</span> <br />
           creator and owners!

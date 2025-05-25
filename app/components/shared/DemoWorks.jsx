@@ -1,4 +1,5 @@
 "use client";
+import { LuArrowUpRight } from "react-icons/lu";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
 import React, { useState } from "react";
@@ -97,6 +98,7 @@ const DemoWorks = () => {
             key={index}
             className="w-full aspect-video rounded-xl overflow-hidden shadow-md">
             <iframe
+            loading="lazy"
               className="w-full h-full"
               src={`https://www.youtube.com/embed/${video.videoId}`}
               title={video.title}
@@ -113,6 +115,7 @@ const DemoWorks = () => {
               key={index}
               className="aspect-[9/16] w-full rounded-xl overflow-hidden shadow-md">
               <iframe
+              loading="lazy"
                 className="w-full h-full"
                 src={`https://www.youtube.com/embed/${short.videoId}`}
                 title={short.title}
@@ -123,8 +126,8 @@ const DemoWorks = () => {
           ))}
         </div>
         <div className="text-center py-20">
-          <button className="py-4 px-8 bg-[#EC4845] text-base font-bold  text-white rounded-[30px] cursor-pointer ">
-            Explore Full Gallery ↗
+          <button className="py-4 px-8 bg-[#EC4845] text-base font-bold  text-white rounded-[30px] cursor-pointer inline-flex items-center gap-5">
+            Explore Full Gallery <LuArrowUpRight />
           </button>
         </div>
       </div>
