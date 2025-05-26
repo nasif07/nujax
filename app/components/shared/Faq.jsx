@@ -49,11 +49,11 @@ const FAQ = () => {
                 "radial-gradient(400.52% 215.22% at -30.93% 148.46%, #373A42 6.7%, #000205 100%)",
               border: "2px solid #2B2E35",
             }}
-            className="border border-gray-200 dark:border-gray-700 rounded-2xl p-6 max-w-6xl mx-auto">
+            className="border border-gray-200 dark:border-gray-700 rounded-2xl p-4 md:p-6 max-w-6xl mx-auto">
             <button
               className="flex justify-between items-center w-full text-left font-medium text-lg"
               onClick={() => toggleFAQ(index)}>
-              <span className="text-white font-semibold text-2xl">
+              <span className="text-white font-semibold text-base md:text-2xl">
                 {index + 1}. {faq.question}
               </span>
               {activeIndex === index ? (
