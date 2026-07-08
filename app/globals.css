@@ -13,3 +13,16 @@
     animation: float 3s ease-in-out infinite;
   }
 }
+@keyframes starBlink {
+  0%   { opacity: 1; transform: scale(1); }
+  40%  { opacity: 0; transform: scale(0.5); } /* shrink & vanish */
+  60%  { opacity: 0; transform: scale(0.5); } /* stay invisible for a while */
+  100% { opacity: 1; transform: scale(1); }   /* come back */
+}
+
+
+.animate-starBlink {
+  animation-name: starBlink;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}

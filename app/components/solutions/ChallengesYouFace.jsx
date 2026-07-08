@@ -30,7 +30,7 @@ const ChallengesYouFace = () => {
         button="Problems"
         title={
           <>
-            The <span className="text-[#EC4845]">Challenges</span> You Face
+            The <span className="text-[#8955E2]">Challenges</span> You Face
           </>
         }
       />
@@ -51,7 +51,7 @@ const ChallengesYouFace = () => {
                       className="w-[80px] h-[80px]"
                     />
                   </div>
-                  <h4 className="text-[#EC4845] text-3xl">{process.title}</h4>
+                  <h4 className="text-[#8955E2] text-3xl">{process.title}</h4>
                   <p className="text-[#878C91] text-base font-medium max-w-[320px]">
                     {process.subtitle}
                   </p>

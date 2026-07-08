@@ -70,7 +70,7 @@ const MeetOurClients = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center text-center pb-5">
-                <p className="text-[#EC4845] text-[64px] font-bold leading-tight">
+                <p className="text-[#8955E2] text-[64px] font-bold leading-tight">
                   {client.earning}
                 </p>
                 <span className="text-[#878C91] text-base">Earnings:</span>

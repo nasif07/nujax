@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="space-y-10 flex-1">
           <h1 className="text-[48px] md:text-[64px] lg:text-[68px] font-semibold text-white max-w-4xl leading-[1.1] tracking-[-2.64px]">
             Use your time on impact -{" "}
-            <span className="text-[#EC4845]">
+            <span className="text-[#8955E2]">
               not chasing content deadlines.
             </span>
           </h1>
@@ -22,7 +22,7 @@ const Banner = () => {
           </p>
           <button
             type="button"
-            className="inline-flex gap-8 items-center py-4 px-8 bg-[#EC4845] text-base font-bold text-white rounded-[30px] cursor-pointer">
+            className="inline-flex gap-8 items-center py-4 px-8 bg-[#8955E2] text-base font-bold text-white rounded-[30px] cursor-pointer">
             Learn more <FaArrowRight />
           </button>
         </div>

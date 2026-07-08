@@ -83,8 +83,8 @@ const DemoWorks = () => {
             onClick={() => setActiveTab(category)}
             className={`px-8 py-3 rounded-full text-base border transition-all duration-300 ${
               activeTab === category
-                ? "bg-[#EC4845] text-white border-[#EC4845]"
-                : "bg-white text-[#010205] border-[#D7D7D7] hover:border-[#EC4845] cursor-pointer"
+                ? "bg-[#8955E2] text-white border-[#8955E2]"
+                : "bg-white text-[#010205] border-[#D7D7D7] hover:border-[#8955E2] cursor-pointer"
             }`}>
             {category}
           </button>
@@ -126,7 +126,7 @@ const DemoWorks = () => {
           ))}
         </div>
         <div className="text-center py-20">
-          <button className="py-4 px-8 bg-[#EC4845] text-base font-bold  text-white rounded-[30px] cursor-pointer inline-flex items-center gap-5">
+          <button className="py-4 px-8 bg-[#8955E2] text-base font-bold  text-white rounded-[30px] cursor-pointer inline-flex items-center gap-5">
             Explore Full Gallery <LuArrowUpRight />
           </button>
         </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Container from "../Container";
 import instragram from "./../../assets/home/instragram.svg";
@@ -5,13 +7,21 @@ import youtube from "./../../assets/home/youtube.svg";
 import tiktok from "./../../assets/home/tiktok.svg";
 import linkedin from "./../../assets/home/linkedin.svg";
 import { FaArrowRight } from "react-icons/fa";
+
 const Banner = () => {
+  const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/your-username/30min";
+
+  const handleScheduleCall = () => {
+    if (typeof window !== "undefined") {
+      window.open(calendlyUrl, "_blank", "noopener,noreferrer");
+    }
+  };
   return (
     <Container>
       <section className="relative">
         <div className="flex flex-col items-center gap-12">
           <h1 className="text-center text-[48px] md:text-[64px] lg:text-[88px] font-semibold text-white max-w-4xl leading-[1.1] tracking-[-2.64px]">
-            <span className="text-[#EC4845]">Unlimited </span>video editing that
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A670F8] to-[#765DE9]">Unlimited </span>video editing that
             goes Viral!
           </h1>
           <p className="text-[#878C91] text-base font-medium text-center max-w-2xl leading-[1.8]">
@@ -22,7 +32,8 @@ const Banner = () => {
           <div className="space-x-5">
             <button
               type="button"
-              className="inline-flex gap-8 items-center py-4 px-8 bg-[#EC4845] text-base font-bold text-white rounded-[30px] cursor-pointer">
+              onClick={handleScheduleCall}
+              className="inline-flex gap-8 items-center py-4 px-8 bg-[#8955E2] text-base font-bold text-white rounded-[30px] cursor-pointer">
               Schedule Call <FaArrowRight />
             </button>
             <button type="button" className="underline text-white">

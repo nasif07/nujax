@@ -31,7 +31,7 @@ const SolutionsWeOffer = () => {
         button="Solutions"
         title={
           <>
-            The <span className="text-[#EC4845]">solutions </span> we offer
+            The <span className="text-[#8955E2]">solutions </span> we offer
           </>
         }
       />
@@ -49,10 +49,10 @@ const SolutionsWeOffer = () => {
                 isLast ? "md:col-span-2" : "flex-col "
               }`}>
               <div className="space-y-4">
-                <div className="text-white w-10 h-10 rounded-full bg-[#EC4845] flex justify-center items-center">
+                <div className="text-white w-10 h-10 rounded-full bg-[#8955E2] flex justify-center items-center">
                   0{index + 1}
                 </div>
-                <h4 className="text-[#EC4845] text-[36px] font-semibold max-w-[400px]">
+                <h4 className="text-[#8955E2] text-[36px] font-semibold max-w-[400px]">
                   {process.title}
                 </h4>
                 <p className="text-white text-base font-medium max-w-[330px]">

@@ -5,22 +5,24 @@ import Services from "./components/home/Services";
 import MarketPlaces from "./components/home/MarketPlaces";
 import OurProcess from "./components/home/OurProcess";
 import FAQ from "./components/shared/Faq";
-import SocialMediaBanner from "./components/shared/SocialMediaBanner";
-import MeetOurClients from "./components/home/MeetOurClients";
+// import MeetOurClients from "./components/home/MeetOurClients";
 import DemoWorks from "./components/shared/DemoWorks";
+import ChallengesYouFace from "./components/solutions/ChallengesYouFace";
+import SolutionsWeOffer from "./components/solutions/SolutionsWeOffer";
 
 export default function Home() {
   return (
     <div>
       <Banner />
       <TrustedBy/>
-      <Services/>
+      <ChallengesYouFace />
+      <SolutionsWeOffer />
       <MarketPlaces/>
-      <MeetOurClients/>
+      <Services/>
+      {/* <MeetOurClients/> */}
       <DemoWorks/>
       <OurProcess/>
       <FAQ/>
-      <SocialMediaBanner/>
     </div>
   );
 }

@@ -2,7 +2,6 @@ import Container from "../components/Container";
 import SectionHeader from "../components/SectionHeader";
 import DemoWorks from "../components/shared/DemoWorks";
 import FAQ from "../components/shared/Faq";
-import SocialMediaBanner from "../components/shared/SocialMediaBanner";
 import batch from "@/app/assets/guaranteedBatch.svg";
 
 const page = () => {
@@ -21,14 +20,13 @@ const page = () => {
           title={
             <>
               3X Your Engagement in 60 Days -{" "}
-              <span className="text-[#EC4845]">Or We Work for Free. </span>
+              <span className="text-[#8955E2]">Or We Work for Free. </span>
             </>
           }
           button={"Success Guaranteed"}
           batch={batch}></SectionHeader>
       </div>
       <FAQ />
-      <SocialMediaBanner />
     </>
   );
 };

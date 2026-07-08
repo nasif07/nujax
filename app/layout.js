@@ -2,12 +2,12 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/shared/Navbar";
 import Footer from "./components/shared/Footer";
+import StarsBackground from "./components/StarBackground";
 
 const plusJakarta = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
 });
-
 
 export const metadata = {
   title: "Create Next App",
@@ -17,11 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${plusJakarta.className} antialiased`}>
+      <body className={`${plusJakarta.className} antialiased`}>
+        <StarsBackground count={150} />
         <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

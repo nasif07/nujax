@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Container from "../Container";
-import logo from "@/public/nujax.svg";
+import logo from "@/public/gooblique-logo.png";
 import {
   FaFacebookF,
   FaTwitter,
@@ -21,7 +21,7 @@ const footerLinks = [
   },
   {
     title: "More",
-    links: ["About Us", "Contact us", "Partner Program"],
+    links: ["About Us", "Schedule Call", "Partner Program"],
   },
   {
     title: "Contact Info",
@@ -47,7 +47,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row gap-10">
           {/* First Column - Bigger */}
           <div className="flex-1 max-w-[570px] mr-10">
-            <Image src={logo} alt="nujax logo" className="w-40 mb-3" />
+            <Image src={logo} alt="gooblique logo" className="w-40 mb-3" />
             <div className="flex gap-4 mt-6 py-7">
               {socialLinks.map((item, index) => (
                 <a
@@ -76,13 +76,21 @@ const Footer = () => {
                   {column.title}
                 </h3>
                 <ul className="space-y-6 text-sm text-[#9B9B9C]">
-                  {column.links.map((link, i) => (
-                    <li key={i}>
-                      <a href="#" className="hover:underline">
-                        {link}
-                      </a>
-                    </li>
-                  ))}
+                  {column.links.map((link, i) => {
+                    const href = link === "Schedule Call" ? process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/your-username/30min" : "#";
+
+                    return (
+                      <li key={i}>
+                        <a
+                          href={href}
+                          target={link === "Schedule Call" ? "_blank" : undefined}
+                          rel={link === "Schedule Call" ? "noopener noreferrer" : undefined}
+                          className="hover:underline">
+                          {link}
+                        </a>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

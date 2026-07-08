@@ -1,4 +1,4 @@
-import MeetOurClients from "../components/home/MeetOurClients";
+// import MeetOurClients from "../components/home/MeetOurClients";
 import SectionHeader from "../components/SectionHeader";
 import FAQ from "../components/shared/Faq";
 import SocialMediaBanner from "../components/shared/SocialMediaBanner";
@@ -13,14 +13,14 @@ const page = () => {
 
       <ChallengesYouFace />
       <SolutionsWeOffer />
-      <MeetOurClients />
+      {/* <MeetOurClients /> */}
 
       <div className="bg-[#010205] pt-16">
         <SectionHeader
           title={
             <>
               3X Your Engagement in 60 Days -{" "}
-              <span className="text-[#EC4845]">Or We Work for Free. </span>
+              <span className="text-[#8955E2]">Or We Work for Free. </span>
             </>
           }
           button={"Success Guaranteed"}
