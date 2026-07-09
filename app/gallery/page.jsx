@@ -14,7 +14,7 @@ const page = () => {
             "Check out our wide range of video projects, highlighting our skill in crafting impactful and engaging video."
           }></SectionHeader>
       </Container>
-      <DemoWorks />
+      <DemoWorks showHeader={false} />
       <div className="bg-[#010205] pt-16">
         <SectionHeader
           title={

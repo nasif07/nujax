@@ -19,29 +19,23 @@ const Banner = () => {
   return (
     <Container>
       <section className="relative">
-        <div className="flex flex-col items-center gap-12">
+        <div className="flex flex-col items-center gap-8">
           <h1 className="text-center text-[48px] md:text-[64px] lg:text-[88px] font-semibold text-white max-w-4xl leading-[1.1] tracking-[-2.64px]">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A670F8] to-[#765DE9]">Unlimited </span>video editing that
-            goes Viral!
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A670F8] to-[#765DE9]">Unlimited </span>video editing that goes Viral!
           </h1>
-          <p className="text-[#878C91] text-base font-medium text-center max-w-2xl leading-[1.8]">
-            Creating engaging content with Storytelling, Graphics, and Sound
-            design. Focused on understanding you and bringing your vision to
-            life.
+          <p className="text-[#878C91] text-sm sm:text-base font-medium text-center max-w-lg sm:max-w-2xl leading-7">
+            Creating engaging content with Storytelling, Graphics, and Sound design. Focused on understanding you and bringing your vision to life.
           </p>
-          <div className="space-x-5">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               type="button"
               onClick={handleScheduleCall}
-              className="inline-flex gap-8 items-center py-4 px-8 bg-[#8955E2] text-base font-bold text-white rounded-[30px] cursor-pointer">
+              className="inline-flex gap-3 items-center py-4 px-8 bg-[#8955E2] text-base font-bold text-white rounded-full cursor-pointer shadow-lg shadow-[#8955E227] transition hover:bg-[#6d3acc]">
               Schedule Call <FaArrowRight />
-            </button>
-            <button type="button" className="underline text-white">
-              View previous works
             </button>
           </div>
 
-          <div className="w-full max-w-[960px] aspect-video rounded-4xl overflow-hidden">
+          <div className="w-full max-w-[960px] aspect-video rounded-[36px] overflow-hidden shadow-2xl">
             <iframe
               className="w-full h-full"
               src="https://www.youtube.com/embed/3vF88LhkU7M"

@@ -1,8 +1,11 @@
 "use client";
 import { LuArrowUpRight } from "react-icons/lu";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
 import Container from "../Container";
 import SectionHeader from "../SectionHeader";
-import React, { useState } from "react";
 
 const categories = [
   "All",
@@ -57,48 +60,57 @@ const shorts = [
   },
 ];
 
-const DemoWorks = () => {
-  const [activeTab, setActiveTab] = useState("All");
-
-  const filteredVideos = videos.filter(
-    (video) => activeTab === "All" || video.category === activeTab
-  );
-
+const DemoWorks = ({ showHeader = true }) => {
   return (
     <Container background={"bg-[#EBEBEB]"}>
-      <SectionHeader
-        button={"Our Portfolio"}
-        title={"Edits That Drive Results"}
-        subTitle={
-          "Check out our wide range of video projects, highlighting our skill in crafting impactful and engaging video."
-        }
-        titleColor="text-[#010205]"
-      />
+      {showHeader && (
+        <SectionHeader
+          button={"Our Portfolio"}
+          title={"Edits That Drive Results"}
+          subTitle={
+            "Check out our wide range of video projects, highlighting our skill in crafting impactful and engaging video."
+          }
+          titleColor="text-[#010205]"
+        />
+      )}
 
-      {/* Category Tabs */}
-      <div className="flex flex-wrap gap-3 justify-center my-10 max-w-5xl mx-auto">
-        {categories.map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveTab(category)}
-            className={`px-8 py-3 rounded-full text-base border transition-all duration-300 ${
-              activeTab === category
-                ? "bg-[#8955E2] text-white border-[#8955E2]"
-                : "bg-white text-[#010205] border-[#D7D7D7] hover:border-[#8955E2] cursor-pointer"
-            }`}>
-            {category}
-          </button>
-        ))}
+      {/* Category Labels */}
+      <div className="my-8 max-w-5xl mx-auto px-4">
+        <div className="hidden sm:flex flex-wrap justify-center gap-3">
+          {categories.map((category) => (
+            <span
+              key={category}
+              className="px-4 py-2 rounded-full text-sm sm:text-base font-medium bg-white text-[#010205] border border-[#D7D7D7] whitespace-nowrap">
+              {category}
+            </span>
+          ))}
+        </div>
+        <div className="sm:hidden">
+          <Swiper
+            modules={[FreeMode]}
+            slidesPerView="auto"
+            spaceBetween={8}
+            freeMode={true}
+            className="py-2">
+            {categories.map((category) => (
+              <SwiperSlide key={category} className="!w-auto">
+                <span className="px-4 py-2 rounded-full text-sm font-medium bg-white text-[#010205] border border-[#D7D7D7] whitespace-nowrap inline-flex items-center justify-center">
+                  {category}
+                </span>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
       </div>
 
       {/* Main Videos */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
-        {filteredVideos.map((video, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 px-4">
+        {videos.map((video, index) => (
           <div
             key={index}
-            className="w-full aspect-video rounded-xl overflow-hidden shadow-md">
+            className="w-full aspect-video rounded-[24px] overflow-hidden shadow-lg bg-black">
             <iframe
-            loading="lazy"
+              loading="lazy"
               className="w-full h-full"
               src={`https://www.youtube.com/embed/${video.videoId}`}
               title={video.title}
@@ -113,9 +125,9 @@ const DemoWorks = () => {
           {shorts.map((short, index) => (
             <div
               key={index}
-              className="aspect-[9/16] w-full rounded-xl overflow-hidden shadow-md">
+              className="aspect-[9/16] w-full rounded-[24px] overflow-hidden shadow-lg bg-black">
               <iframe
-              loading="lazy"
+                loading="lazy"
                 className="w-full h-full"
                 src={`https://www.youtube.com/embed/${short.videoId}`}
                 title={short.title}
@@ -125,8 +137,8 @@ const DemoWorks = () => {
             </div>
           ))}
         </div>
-        <div className="text-center py-20">
-          <button className="py-4 px-8 bg-[#8955E2] text-base font-bold  text-white rounded-[30px] cursor-pointer inline-flex items-center gap-5">
+        <div className="text-center py-12 px-4">
+          <button className="w-full max-w-xs mx-auto py-4 px-7 bg-[#8955E2] text-base font-bold text-white rounded-full cursor-pointer inline-flex justify-center items-center gap-3 shadow-lg transition duration-300 hover:bg-[#6d3acc]">
             Explore Full Gallery <LuArrowUpRight />
           </button>
         </div>

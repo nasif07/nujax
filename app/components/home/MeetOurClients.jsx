@@ -35,45 +35,45 @@ const MeetOurClients = () => {
 
   return (
     <Container>
-      <section className="bg-[#010205] border border-[#292C33] rounded-4xl pt-10 pb-20">
+      <section className="bg-[#010205] border border-[#292C33] rounded-4xl pt-8 pb-12">
         <SectionHeader
           title={"Quality Edits Pay Off"}
           subTitle={"Quality content + Quality edits = Real Results! "}
           button={"Meet our clients"}
-          rootClasses={"pb-20"}
+          rootClasses={"pb-12"}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 max-w-6xl mx-auto gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-full mx-auto gap-6">
           {clientFeedbacks.map((client, index) => (
             <div
               key={index}
-              className="flex flex-col p-4 border border-[#292C33] rounded-4xl">
+              className="flex flex-col p-4 sm:p-5 border border-[#292C33] rounded-4xl">
               <iframe
                 src={client.video}
                 className="rounded-3xl"
                 title={`${client.clientName}'s feedback`}
                 frameBorder="0"
-                height={"270px"}
+                height={"240"}
                 allowFullScreen></iframe>
-              <div className="flex items-center gap-10 pt-10 pb-2 px-5">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 pt-6 pb-2 px-4 sm:px-5">
                 <img
                   src={client.photo}
                   alt={client.clientName}
-                  className="w-24 h-24 rounded-full object-cover"
+                  className="w-20 h-20 rounded-full object-cover"
                 />
                 <div className="flex-1">
-                  <h3 className="text-white text-3xl font-semibold">
+                  <h3 className="text-white text-2xl sm:text-3xl font-semibold">
                     {client.clientName}
                   </h3>
-                  <p className="text-[#878C91] text-base mt-1">
+                  <p className="text-[#878C91] text-sm sm:text-base mt-1">
                     {client.email}
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center text-center pb-5">
-                <p className="text-[#8955E2] text-[64px] font-bold leading-tight">
+              <div className="flex flex-col items-center justify-center text-center pb-4">
+                  <p className="text-[#8955E2] text-[64px] sm:text-[64px] font-bold leading-tight">
                   {client.earning}
                 </p>
-                <span className="text-[#878C91] text-base">Earnings:</span>
+                <span className="text-[#878C91] text-sm sm:text-base">Earnings:</span>
               </div>
             </div>
           ))}

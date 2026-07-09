@@ -44,11 +44,11 @@ const Footer = () => {
   return (
     <Container>
       <footer className="py-10">
-        <div className="flex flex-col md:flex-row gap-10">
+        <div className="flex flex-col gap-10 lg:flex-row lg:items-start">
           {/* First Column - Bigger */}
-          <div className="flex-1 max-w-[570px] mr-10">
-            <Image src={logo} alt="gooblique logo" className="w-40 mb-3" />
-            <div className="flex gap-4 mt-6 py-7">
+          <div className="flex-1 lg:max-w-[38%]">
+            <Image src={logo} alt="gooblique logo" className="w-36 mb-3" />
+            <div className="flex flex-wrap gap-4 mt-6 py-4">
               {socialLinks.map((item, index) => (
                 <a
                   key={index}
@@ -60,22 +60,19 @@ const Footer = () => {
                 </a>
               ))}
             </div>
-            <p className="text-sm text-[#9B9B9C] leading-5.5">
-              A creative video editing agency specializing in storytelling,
-              visual effects, and seamless post-production. We focus on
-              understanding your vision and transforming your ideas into
-              captivating visual content that leaves a lasting impact.
+            <p className="text-sm sm:text-base text-[#9B9B9C] leading-6">
+              A creative video editing agency specializing in storytelling, visual effects, and seamless post-production. We focus on understanding your vision and transforming your ideas into captivating visual content that leaves a lasting impact.
             </p>
           </div>
 
           {/* Other 3 Columns */}
-          <div className="flex-1 flex justify-between">
+          <div className="flex flex-col sm:flex-row gap-10 lg:gap-8 flex-1">
             {footerLinks.map((column, index) => (
               <div className="flex-1" key={index}>
-                <h3 className="text-lg font-semibold mb-8 text-white">
+                <h3 className="text-lg font-semibold mb-6 text-white">
                   {column.title}
                 </h3>
-                <ul className="space-y-6 text-sm text-[#9B9B9C]">
+                <ul className="space-y-4 text-sm sm:text-base text-[#9B9B9C]">
                   {column.links.map((link, i) => {
                     const href = link === "Schedule Call" ? process.env.NEXT_PUBLIC_CALENDLY_URL || "https://calendly.com/your-username/30min" : "#";
 

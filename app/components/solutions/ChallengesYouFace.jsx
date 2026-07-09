@@ -34,30 +34,30 @@ const ChallengesYouFace = () => {
           </>
         }
       />
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {challenges.map((process, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-center gap-4 text-center py-16 border border-[#292C33] rounded-4xl">
-                  <div
-                    style={{
-                      background:
-                        "radial-gradient(400.52% 215.22% at -30.93% 148.46%, #373A42 6.7%, #000205 100%)",
-                    }}
-                    className="rounded-full p-12 border-2 border-[#2B2E35] mb-3">
-                    <Image
-                      src={process.icon}
-                      alt={process.title}
-                      className="w-[80px] h-[80px]"
-                    />
-                  </div>
-                  <h4 className="text-[#8955E2] text-3xl">{process.title}</h4>
-                  <p className="text-[#878C91] text-base font-medium max-w-[320px]">
-                    {process.subtitle}
-                  </p>
-                </div>
-              ))}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 px-4 sm:px-0">
+        {challenges.map((process, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center gap-4 text-center py-10 sm:py-16 px-4 sm:px-6 border border-[#292C33] rounded-[32px]">
+            <div
+              style={{
+                background:
+                  "radial-gradient(400.52% 215.22% at -30.93% 148.46%, #373A42 6.7%, #000205 100%)",
+              }}
+              className="rounded-full p-8 sm:p-12 border-2 border-[#2B2E35] mb-3">
+              <Image
+                src={process.icon}
+                alt={process.title}
+                className="w-[56px] h-[56px] sm:w-[80px] sm:h-[80px]"
+              />
             </div>
+            <h4 className="text-[#8955E2] text-2xl sm:text-3xl">{process.title}</h4>
+            <p className="text-[#878C91] text-sm sm:text-base font-medium max-w-xs sm:max-w-[320px]">
+              {process.subtitle}
+            </p>
+          </div>
+        ))}
+      </div>
     </Container>
   );
 };

@@ -17,9 +17,9 @@ const Navbar = () => {
     "https://calendly.com/your-username/30min";
 
   const routes = [
-    { name: "Solutions", href: "/solutions" },
+    { name: "Home", href: "/" },
     { name: "Our Gallery", href: "/gallery" },
-    { name: "Request a Demo", href: calendlyUrl, isExternal: true },
+    { name: "Request a Demo", href: "/request-demo" },
   ];
 
   const handleScheduleCall = () => {
@@ -57,7 +57,7 @@ const Navbar = () => {
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
         }`}>
-        <div className="rounded-full border border-white/10 bg-[#010205]/80 px-4 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.12)] backdrop-blur-md lg:px-6 lg:py-3">
+        <div className="rounded-full border border-white/10 bg-[#010205]/70 px-4 py-3 shadow-[0_4px_20px_rgba(0,0,0,0.12)] backdrop-blur-md lg:px-6 lg:py-3">
           <div className="flex items-center justify-between gap-3">
             <div>
               <Link href="/">
